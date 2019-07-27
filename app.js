@@ -24,6 +24,13 @@ this.badGame=function(){
 
 };
 
+   
+Player.prototype.printInfo=function(){
+    console.log("Name: " + this.name + "\nPosition: " + this.position +
+    "\nDefense: " + this.age + "\nOffense: " + this.language);
+    console.log("---------------");
+}
+
 var inquirer=require('inquirer');
 
 var count=0;
@@ -51,8 +58,11 @@ var askQuestion= function(){
                   playerArray.push(newPlayer);
                   count++;
                   askQuestion();
-            })
+            });
             
-    }
+            }
+            else{
+            
+            }
 
 }

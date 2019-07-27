@@ -26,21 +26,29 @@ this.badGame=function(){
 
 var inquirer=require('inquirer');
 
-
+var count=0;
+var playerArray=[];
 var askQuestion= function(){
 
-    inquirer.promot([{
-        name:"name",
-        message :"what is your name?"
-            }, {
-        name:"position",
-        message: "what is your position?"
-            }, {
-        name:"offense",
-        message:"how good is your defense?"
-            },{
-        name:"offense",
-        message:"how good is your defense?"   
-            }
-        ]).
+    if(count<4){
+
+        inquirer.promot([{
+            name:"name",
+            message :"what is your name?"
+                }, {
+            name:"position",
+            message: "what is your position?"
+                }, {
+            name:"offense",
+            message:"how good is your defense?"
+                },{
+            name:"offense",
+            message:"how good is your defense?"   
+                }
+            ]).then(function(answers){
+                var firstStarter=new Player(answrs.name,answers.position,answers.offense,answers.defense);
+    
+            })
+    }
+
 }

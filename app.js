@@ -22,4 +22,25 @@ this.badGame=function(){
 
 }
 
+};
+
+var inquirer=require('inquirer');
+
+
+var askQuestion= function(){
+
+    inquirer.promot([{
+        name:"name",
+        message :"what is your name?"
+            }, {
+        name:"position",
+        message: "what is your position?"
+            }, {
+        name:"offense",
+        message:"how good is your defense?"
+            },{
+        name:"offense",
+        message:"how good is your defense?"   
+            }
+        ]).
 }

@@ -7,17 +7,21 @@ this.defense=defense;
 this.goodGame=function(){
  if((Math.floor(Math.random()*2))===0){
      this.defense++;
+     console.log(this.name+"'s offense has gone up")
  }
  else{
      this.offense++;
+     console.log(this.name+"'s offense has gone up");
  }
 };
 this.badGame=function(){
     if((Math.floor(Math.random()*2)===0){
         this.defense++;
+        console.log(this.name+"'s offense has gone down");
     }
     else{
         this.offense--;
+        console.log(this.name+"'s offense has gone down");
     } 
 
 }
@@ -34,9 +38,9 @@ Player.prototype.printInfo=function(){
 var inquirer=require('inquirer');
 
 var count=0;
-var playerArray=[];
+var team=[];
 
-var askQuestion= function(){
+var createPlayer= function(){
 
     if(count<4){
 
@@ -55,14 +59,18 @@ var askQuestion= function(){
                 }
             ]).then(function(answers){
                 var newPlayer=new Player(answrs.name,answers.position,answers.offense,answers.defense);
-                  playerArray.push(newPlayer);
+                  team.push(newPlayer);
                   count++;
-                  askQuestion();
+                  createPlayer();
             });
             
             }
             else{
-            
+            for (j=0; j<team.length;j++){
+
+                team[j].printInfo;
+            }
+                
             }
 
 }

@@ -35,7 +35,6 @@ function Player(name, position, offense, defense) {
     console.log("---------------");
   };
 }
-// creates the printInfo method and applies it to all programmer objects
 
 // dependency for inquirer npm package
 var inquirer = require("inquirer");
@@ -44,7 +43,7 @@ var count = 0;
 var team = [];
 
 var createPlayer = function() {
-  if (count < 2) {
+  if (count < 3) {
     inquirer
       .prompt([
         {
